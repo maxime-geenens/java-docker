@@ -1,0 +1,21 @@
+logging:
+  level:
+    org:
+      springframework: INFO
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    open-in-view: false
+    properties:
+      jakarta:
+        persistence:
+          sharedCache:
+            mode: NONE
+  main:
+    banner-mode: 'off'
+  sql:
+    init:
+      data-locations: classpath*:db/h2/data.sql
+      mode: always
+      schema-locations: classpath*:db/h2/schema.sql
